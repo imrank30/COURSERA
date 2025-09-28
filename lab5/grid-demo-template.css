@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: grid;
+    grid-template-areas: 
+        "head head"
+        "nav  main"
+        "footer  footer";
+    grid-template-rows: 30px 1fr 30px;
+    grid-template-columns: 150px 1fr;
+    height: 200px;
+    /* gap: 10px; */
+}
+header{
+    grid-area: head;
+    background-color: lightcoral;
+    text-align: center;
+}
+.Nav-Bar {
+    grid-area: nav;
+    background-color: lightblue;
+    text-align: center;
+    /* text-align: center; */
+}
+main {
+    grid-area: main;
+    background-color: lightgreen;
+    text-align: center;
+}   
+footer {
+    grid-area: footer;
+    background-color: firebrick;
+    text-align: center;
+    /* text-align: center; */
+}
