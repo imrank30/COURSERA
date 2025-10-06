@@ -1,0 +1,169 @@
+
+/* --------- Base --------- */
+/* === Reset default spacing and set a basic font === */
+body {
+  margin: 0; /* removes default space around the page */
+  font-family: Arial, Helvetica, sans-serif; /* sets a clean readable font */
+  background-color: #f3f3f3; /* light gray background for the page */
+}
+
+/* === Header (Logo area) === */
+header {
+  text-align: center; /* centers the logo horizontally */
+  padding: 20px 0; /* adds space above and below the logo */
+}
+
+header img {
+  width: 250px; /* sets logo width */
+  height: auto; /* keeps logo height in proportion */
+}
+
+/* === Navigation bar === */
+nav {
+  background-color: #333; /* dark background (almost black) */
+  border-radius: 25px; /* rounded corners for the bar */
+  padding: 10px; /* space inside the bar */
+  display: flex; /* makes items (links) align in a row */
+  justify-content: center; /* centers all links horizontally */
+  gap: 30px; /* space between each link */
+  margin: 10px 20px; /* space around the bar */
+}
+
+nav a {
+  color: white; /* makes link text white */
+  text-decoration: none; /* removes underline */
+  font-weight: bold; /* makes text bold */
+}
+
+nav a:hover {
+  text-decoration: underline; /* adds underline when hovered */
+}
+
+/* === Main content area === */
+main {
+  max-width: 1000px; /* keeps the content from stretching too wide */
+  margin: 0 auto; /* centers the main section */
+  padding: 20px; /* space inside the main area */
+}
+
+/* === Hero Section (Top big image with offer text) === */
+main section:first-of-type {
+  position: relative; /* lets us place text on top of the image */
+  border-radius: 20px; /* rounded edges for the box */
+  overflow: hidden; /* hides anything outside the rounded edge */
+  margin-bottom: 30px; /* space below the hero section */
+}
+
+main section:first-of-type img {
+  width: 100%; /* image fills the section width */
+  height: 250px; /* sets image height */
+  object-fit: cover; /* crops image nicely to fit box */
+  display: block; /* removes unwanted space below image */
+  filter: brightness(0.8); /* slightly darkens image for text readability */
+}
+
+main section:first-of-type h2 {
+  position: absolute; /* place text over image */
+  top: 20px; /* distance from the top edge */
+  left: 20px; /* distance from the left edge */
+  color: white; /* white text color */
+  font-size: 28px; /* larger text size */
+  margin: 0; /* removes default spacing */
+}
+
+main section:first-of-type p {
+  position: absolute; /* place paragraph on image */
+  bottom: 20px; /* distance from bottom edge */
+  left: 20px; /* distance from left edge */
+  right: 20px; /* distance from right edge */
+  color: white; /* white text */
+  font-size: 14px; /* smaller font size */
+}
+
+/* === Cards Section (Our Menu / Book / Hours) === */
+main section:nth-of-type(2) {
+  display: grid; /* creates columns automatically */
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 20px; /* space between each card */
+}
+
+/* Each card (article) box */
+article {
+  background-color: #f6e8da; /* light peach color like sample */
+  border-radius: 15px; /* rounded corners */
+  padding: 15px; /* inner spacing */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* soft shadow under cards */
+}
+
+article img {
+  width: 100%; /* image fits card width */
+  height: 180px; /* image height */
+  object-fit: cover; /* crops image neatly */
+  border-radius: 10px; /* rounded corners for image */
+  margin-bottom: 10px; /* space below image */
+}
+
+article h2 {
+  font-size: 18px; /* heading size */
+  margin-bottom: 10px; /* space below heading */
+}
+
+article p {
+  font-size: 14px; /* normal text size */
+  color: #333; /* dark gray text */
+  margin-bottom: 10px; /* space below paragraph */
+}
+
+article a {
+  color: #0077cc; /* blue link color */
+  text-decoration: none; /* no underline */
+  font-weight: bold; /* bold link */
+}
+
+article a:hover {
+  text-decoration: underline; /* underline when hovered */
+}
+
+/* === Footer section === */
+/* === Footer section === */
+footer {
+  display: flex;                /* places logo and text in a row */
+  justify-content: space-between; /* pushes them to opposite ends */
+  align-items: center;          /* vertically centers both items */
+  padding: 15px 20px;           /* space inside footer */
+  margin-top: 40px;             /* space above footer */
+}
+
+/* copyright text on the left */
+footer p {
+  margin: 0;                    /* removes default space */
+  padding-top: 10px;            /* space above text */
+  border-top: 1px solid #ccc;   /* line above the text only */
+  color: #555;                  /* gray text color */
+  font-size: 14px;              /* small text size */
+}
+
+/* logo box on the right */
+footer > div {
+  background: #d9dedf;          /* light gray background for logo box */
+  border-radius: 8px;           /* slightly rounded corners */
+  padding: 10px;                /* space inside box */
+}
+
+footer img {
+  width: 50px;                  /* small logo size */
+  height: auto;                 /* keeps proportions */
+}
+
+
+/* === Make the page responsive (mobile-friendly) === */
+@media (max-width: 800px) {
+  main section:nth-of-type(2) {
+    grid-template-columns: 1fr; /* stack cards vertically on small screens */
+  }
+
+  main section:first-of-type img {
+    height: 200px; /* smaller hero image on phones */
+  }
+}
+
